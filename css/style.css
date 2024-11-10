@@ -310,12 +310,12 @@ nav ul {
 }
 
 /* Button Styling */
-.btn-more {
+.gallery__item .btn-more {
   display: block;
   width: 80%;
   margin: 1rem auto;
   padding: 0.8rem 1.5rem;
-  background: #19223A;
+  background: #6b1212;
   color: #f4e4bc;
   border: 2px solid #d4af37;
   font-family: 'Luminari', 'Papyrus', fantasy;
@@ -326,7 +326,7 @@ nav ul {
   overflow: hidden;
 }
 
-.btn-more::before {
+.gallery__item .btn-more::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -338,12 +338,13 @@ nav ul {
   transition: transform 0.6s ease;
 }
 
-.btn-more:hover {
+.gallery__item .btn-more:hover {
   transform: translateY(-2px);
   box-shadow: var(--spell-glow);
+    filter: brightness(1.2);
 }
 
-.btn-more:hover::before {
+.gallery__item .btn-more:hover::before {
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -431,10 +432,12 @@ nav ul {
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #CD9327;
 }
 
 .news__item:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  box-shadow: 0 0 10px #CD9327;
 }
 
 .news__img {
@@ -446,10 +449,14 @@ nav ul {
   padding: 15px;
 }
 
+.news__summary {
+  text-align: justify;
+}
+
 /* Hogwarts House Colors */
 .news__item:nth-child(1) {
-  background-color: #7f0909; /* Gryffindor Red */
-  color: #ffc500; /* Gold */
+  background-color: #7f0909; 
+  color: #ffc500; 
 }
 
 .news__item:nth-child(1) .btn-more {
@@ -459,19 +466,19 @@ nav ul {
 }
 
 .news__item:nth-child(2) {
-  background-color: #0e1a40; /* Ravenclaw Blue */
-  color: #946b2d; /* Bronze */
+  background-color: #0e1a40; 
+  color: #b98638; 
 }
 
 .news__item:nth-child(2) .btn-more {
-  background-color: #946b2d;
+  background-color: #b98638;
   color: #0e1a40;
   border: none;
 }
 
 .news__item:nth-child(3) {
-  background-color: #ecb939; /* Hufflepuff Yellow */
-  color: #372e29; /* Dark Brown */
+  background-color: #ecb939; 
+  color: #372e29; 
 }
 
 .news__item:nth-child(3) .btn-more {
@@ -481,8 +488,8 @@ nav ul {
 }
 
 .news__item:nth-child(4) {
-  background-color: #2a623d; /* Slytherin Green */
-  color: #aaaaaa; /* Silver */
+  background-color: #2a623d; 
+  color: #aaaaaa; 
 }
 
 .news__item:nth-child(4) .btn-more {
@@ -491,21 +498,35 @@ nav ul {
   border: none;
 }
 
-/* Button styling */
-.btn-more {
+.news__content .btn-more {
   padding: 8px 15px;
   border-radius: 5px;
-  cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 10px 10px;
+  display: block;
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.btn-more:hover {
+.news__content .btn-more::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+}
+
+.news__content .btn-more:hover {
   filter: brightness(1.2);
+  transition: 0.3s;
+  transform: scale(1.02);
 }
 
-/* News item title and date styling */
 .news__title {
   font-size: 1.2em;
   margin-bottom: 8px;
