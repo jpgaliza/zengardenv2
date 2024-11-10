@@ -437,7 +437,7 @@ nav ul {
 
 .news__item:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 10px #CD9327;
+  box-shadow: 0 0 7px #CD9327;
 }
 
 .news__img {
@@ -453,7 +453,6 @@ nav ul {
   text-align: justify;
 }
 
-/* Hogwarts House Colors */
 .news__item:nth-child(1) {
   background-color: #7f0909; 
   color: #ffc500; 
@@ -515,10 +514,10 @@ nav ul {
 .news__content .btn-more::before {
     content: '';
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
     width: 200%;
-    height: 200%;
+    height: 200%; */
 }
 
 .news__content .btn-more:hover {
@@ -538,20 +537,25 @@ nav ul {
   opacity: 0.8;
 }
 
-
-/* Contact Section */
+.section--contact {
+  background-image: 
+      linear-gradient(rgba(15, 21, 35, 0.9), rgba(16, 30, 42, 0.9)),
+      url('https://www.transparenttextures.com/patterns/old-map.png');
+}
 .form__group {
   margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .form__group input,
 .form__group textarea {
+  font-size: 1.2rem;
   width: 100%;
   padding: 1rem;
-  background: #2a231d;
-  border: 1px solid #473b2d;
-  color: #d4c8b8;
-  font-family: 'Playfair Display', serif;
+  background: rgb(0, 0, 0, 0.1);
+  border: 1px solid #CD9327;
+  color: #CD9327;
+  font-family: "DM Serif Display", serif;
 }
 
 .form__group input:focus,
@@ -566,31 +570,35 @@ nav ul {
 }
 
 button[type="submit"] {
-  background-color: #473b2d;
-  color: #c4a484;
+  background-color: #19223A;
   padding: 1rem 2rem;
-  border: 1px solid #c4a484;
+  border: 1px solid #CD9327;
+  color: #CD9327;
   cursor: pointer;
   font-family: 'Cinzel', serif;
   transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #c4a484;
-  color: #2a231d;
+  background-color: #CD9327;
+  color: #19223A;
+  border: 1px solid #19223A;
 }
 
-/* Footer */
 .footer__content {
-  background: #2a231d;
-  color: #c4a484;
+  background: #0f1523;
+  color: #CD9327;
   text-align: center;
   padding: 2rem;
-  border-top: 1px solid #473b2d;
+  width: 100%;
+}
+
+.footer__social {
+  margin-top: 20px;
 }
 
 .social__link {
-  color: #c4a484;
+  color: #CD9327;
   text-decoration: none;
   margin: 0 1rem;
   transition: color 0.3s ease;
@@ -598,6 +606,7 @@ button[type="submit"]:hover {
 
 .social__link:hover {
   color: #e6c9a8;
+  transition: color 0.3s ease;
 }
 
 /* Responsive Design */
