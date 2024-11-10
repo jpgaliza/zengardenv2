@@ -211,90 +211,312 @@ nav ul {
   font-size: 1.5rem;
 }
 
+.section--about {
+  background-image: 
+      linear-gradient(rgba(15, 21, 35, 0.9), rgba(16, 30, 42, 0.9)),
+      url('https://www.transparenttextures.com/patterns/old-map.png');
+}
+
 /* Gallery Section */
+.section--gallery {
+  background-color: #1a1a1a;
+  background-image: 
+      linear-gradient(rgba(16, 30, 42, 0.9), rgba(15, 21, 35, 0.9)),
+      url('https://www.transparenttextures.com/patterns/old-map.png');
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Title Styling */
+.section__title {
+  font-family: 'Luminari', 'Papyrus', fantasy;
+  color: #CD9327;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 15px #CD9327b3;
+  position: relative;
+}
+
+.section__title::after {
+  content: '✦';
+  display: block;
+  font-size: 2rem;
+  color: #d4af37;
+  margin-top: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .gallery__item {
   position: relative;
-  border: 1px solid #CD9327;
-  overflow: hidden;
-  border-radius: 10px;
+  background: #f4e4bc;
+  padding: 1rem;
+  border: 3px solid #d4af37;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.gallery__item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #d4af37;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.gallery__item:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
 .gallery__img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  transition: all 0.3s ease;
+  border: 2px solid #8b4513;
+  transition: all 0.4s ease;
+  filter: sepia(20%);
 }
 
 .gallery__item:hover .gallery__img {
-  transform: scale(1.05);
+  filter: sepia(0%);
+  transform: scale(1.02);
 }
 
+/* Caption Styling */
+.gallery__caption {
+  font-family: 'Luminari', 'Papyrus', fantasy;
+  color: #2a1810;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+/* Button Styling */
 .btn-more {
-  background: #CD9327;
-  border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace;
-  border: 0;
-  padding: 2px;
-  font-family: "DM Serif Display", serif;
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 0.8rem 1.5rem;
+  background: #19223A;
+  color: #f4e4bc;
+  border: 2px solid #d4af37;
+  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Services Section */
+.btn-more::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 50%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s ease;
+}
+
+.btn-more:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--spell-glow);
+}
+
+.btn-more:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+  .section__title {
+      font-size: 2rem;
+  }
+  
+  .gallery__grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+  }
+  
+  .gallery__item {
+      padding: 0.5rem;
+  }
+  
+  .gallery__img {
+      height: 200px;
+  }
+}
+
+.gallery__item::after {
+  content: '⚡';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  font-size: 2rem;
+  color: #d4af37;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.gallery__item:hover::after {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+}
+
+.section--services {
+  background-image: 
+      linear-gradient(rgba(15, 21, 35, 0.9), rgba(16, 30, 42, 0.9)),
+      url('https://www.transparenttextures.com/patterns/old-map.png');
+}
+
 .services__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .service__item {
-  background: #2a231d;
-  padding: 2rem;
-  border: 1px solid #473b2d;
-  transition: transform 0.3s ease;
+  padding: 20px;
+  border: 1px solid #CD9327;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-size: 1.2rem;
 }
 
 .service__item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: 0px 0px 10px #CD9327;
 }
 
-.service__title {
-  color: #c4a484;
-  margin-bottom: 1rem;
-  font-family: 'Cinzel', serif;
-}
 
 /* News Section */
+/* General news section styling */
+.section--news {
+  background-image: 
+      linear-gradient(rgba(16, 30, 42, 0.9), rgba(15, 21, 35, 0.9)),
+      url('https://www.transparenttextures.com/patterns/old-map.png')
+}
+
 .news__grid {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  padding: 0px 200px;
+}
+
+.news__item {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.news__item:hover {
+  transform: scale(1.05);
 }
 
 .news__img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  filter: sepia(0.3);
+  height: auto;
 }
 
 .news__content {
-  background: #2a231d;
-  padding: 2rem;
-  border: 1px solid #473b2d;
+  padding: 15px;
 }
 
-.news__title {
-  color: #c4a484;
-  margin-bottom: 1rem;
-  font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
+/* Hogwarts House Colors */
+.news__item:nth-child(1) {
+  background-color: #7f0909; /* Gryffindor Red */
+  color: #ffc500; /* Gold */
 }
+
+.news__item:nth-child(1) .btn-more {
+  background-color: #ffc500;
+  color: #7f0909;
+  border: none;
+}
+
+.news__item:nth-child(2) {
+  background-color: #0e1a40; /* Ravenclaw Blue */
+  color: #946b2d; /* Bronze */
+}
+
+.news__item:nth-child(2) .btn-more {
+  background-color: #946b2d;
+  color: #0e1a40;
+  border: none;
+}
+
+.news__item:nth-child(3) {
+  background-color: #ecb939; /* Hufflepuff Yellow */
+  color: #372e29; /* Dark Brown */
+}
+
+.news__item:nth-child(3) .btn-more {
+  background-color: #372e29;
+  color: #ecb939;
+  border: none;
+}
+
+.news__item:nth-child(4) {
+  background-color: #2a623d; /* Slytherin Green */
+  color: #aaaaaa; /* Silver */
+}
+
+.news__item:nth-child(4) .btn-more {
+  background-color: #aaaaaa;
+  color: #2a623d;
+  border: none;
+}
+
+/* Button styling */
+.btn-more {
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-more:hover {
+  filter: brightness(1.2);
+}
+
+/* News item title and date styling */
+.news__title {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.news__date {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
 
 /* Contact Section */
 .form__group {
