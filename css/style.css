@@ -24,11 +24,6 @@ body {
   position: relative;
   background: #0f1523;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* background-image: url(https://images7.alphacoders.com/135/1353023.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  background-position-y: center; */
 }
 
 .header__container {
@@ -54,7 +49,6 @@ body {
 
 nav {
   background: #19223A;
-  /* background: #101e2a; */
   padding: 1rem 0;
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -130,6 +124,7 @@ nav ul {
   font-size: 4rem;
   margin-bottom: 0px;
   color: #CD9327;
+  font-family: 'Harry Potter', sans-serif;
 }
 
 .intro__text {
@@ -182,7 +177,6 @@ nav ul {
   margin-bottom: 2rem;
 }
 
-/* About Section */
 .about__grid {
   display: flex;
   gap: 2rem;
@@ -217,7 +211,6 @@ nav ul {
       url('https://www.transparenttextures.com/patterns/old-map.png');
 }
 
-/* Gallery Section */
 .section--gallery {
   background-color: #1a1a1a;
   background-image: 
@@ -228,7 +221,6 @@ nav ul {
   overflow: hidden;
 }
 
-/* Section Title Styling */
 .section__title {
   font-family: 'Luminari', 'Papyrus', fantasy;
   color: #CD9327;
@@ -299,7 +291,6 @@ nav ul {
   transform: scale(1.02);
 }
 
-/* Caption Styling */
 .gallery__caption {
   font-family: 'Luminari', 'Papyrus', fantasy;
   color: #2a1810;
@@ -309,7 +300,6 @@ nav ul {
   position: relative;
 }
 
-/* Button Styling */
 .gallery__item .btn-more {
   display: block;
   width: 80%;
@@ -346,25 +336,6 @@ nav ul {
 
 .gallery__item .btn-more:hover::before {
   transform: translate(-50%, -50%) scale(1);
-}
-
-@media (max-width: 768px) {
-  .section__title {
-      font-size: 2rem;
-  }
-  
-  .gallery__grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-  }
-  
-  .gallery__item {
-      padding: 0.5rem;
-  }
-  
-  .gallery__img {
-      height: 200px;
-  }
 }
 
 .gallery__item::after {
@@ -411,9 +382,6 @@ nav ul {
   box-shadow: 0px 0px 10px #CD9327;
 }
 
-
-/* News Section */
-/* General news section styling */
 .section--news {
   background-image: 
       linear-gradient(rgba(16, 30, 42, 0.9), rgba(15, 21, 35, 0.9)),
@@ -446,7 +414,7 @@ nav ul {
 }
 
 .news__content {
-  padding: 15px;
+  padding: 30px;
 }
 
 .news__summary {
@@ -509,15 +477,13 @@ nav ul {
   transition: 0.3s;
   margin-top: 20px;
   margin-bottom: 10px;
+  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-size: 0.8rem;
 }
 
 .news__content .btn-more::before {
     content: '';
     position: absolute;
-    /* top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%; */
 }
 
 .news__content .btn-more:hover {
@@ -591,10 +557,20 @@ button[type="submit"]:hover {
   text-align: center;
   padding: 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .footer__social {
-  margin-top: 20px;
+  margin-top: 0px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__text {
+  font-size: 1rem;
 }
 
 .social__link {
@@ -609,7 +585,6 @@ button[type="submit"]:hover {
   transition: color 0.3s ease;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header__title {
     font-size: 2rem;
@@ -633,5 +608,18 @@ button[type="submit"]:hover {
   
   .section__title {
     font-size: 2rem;
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gallery__item {
+    padding: 0.5rem;
+  }
+
+  .gallery__img {
+    height: 200px;
   }
 }
