@@ -592,6 +592,10 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 5rem 2rem;
+  } 
+
   .header__container {
     padding: 0;
   }
@@ -625,8 +629,23 @@ button[type="submit"]:hover {
     text-align: center;
   }
   
+  .section--intro {
+    padding: 0rem 2rem;
+    height: 60vh;
+    background-position-x: center;
+  }
+
   .intro__title {
     font-size: 2.5rem;
+  }
+
+  .intro__text {
+    font-size: 1.2rem;
+  }
+
+  .intro__button {
+    padding: 0.5rem 0.5rem;
+    margin: 10px;
   }
   
   .section__title {
@@ -664,5 +683,14 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .section__content {
+    padding: 0 0;
+  }
+
+  .form__button {
+    padding: 0.5rem 0.5rem;
+    margin: auto;
   }
 } 
