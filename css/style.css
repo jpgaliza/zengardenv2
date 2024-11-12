@@ -359,6 +359,7 @@ nav ul {
   background-image: 
       linear-gradient(rgba(15, 21, 35, 0.9), rgba(16, 30, 42, 0.9)),
       url('https://www.transparenttextures.com/patterns/old-map.png');
+  padding: 4rem 2rem;
 }
 
 .services__list {
@@ -385,14 +386,17 @@ nav ul {
 .section--news {
   background-image: 
       linear-gradient(rgba(16, 30, 42, 0.9), rgba(15, 21, 35, 0.9)),
-      url('https://www.transparenttextures.com/patterns/old-map.png')
+      url('https://www.transparenttextures.com/patterns/old-map.png');
+  padding: 4rem 2rem;
 }
 
 .news__grid {
   display: grid;
-  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 0px 100px;
+  gap: 2.5rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .news__item {
@@ -401,6 +405,8 @@ nav ul {
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #CD9327;
+  /* max-height: 400px;
+  max-width: 300px; */
 }
 
 .news__item:hover {
@@ -586,14 +592,31 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
+  .header__container {
+    padding: 0;
+  }
+  
   .header__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding: 10px 10px;
+  }
+
+  .header__subtitle {
+    padding: 10px 50px;
+    margin-bottom: 20px;
+    font-size: 1rem;
   }
   
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    /* flex-direction: column;
+    align-items: center; */
+    padding: 0rem;
+    gap: 0px;
+  }
+
+  .menu__link {
+    font-size: 0.7rem;
   }
   
   .menu__link {
@@ -625,7 +648,7 @@ button[type="submit"]:hover {
 
   .news__grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 0 0;
   }
 
@@ -642,4 +665,4 @@ button[type="submit"]:hover {
     flex-direction: column;
     gap: 2rem;
   }
-}
+} 
