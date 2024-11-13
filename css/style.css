@@ -400,13 +400,12 @@ nav ul {
 }
 
 .news__item {
-  border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #CD9327;
-  /* max-height: 400px;
-  max-width: 300px; */
+  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-weight: bold;
 }
 
 .news__item:hover {
@@ -421,6 +420,10 @@ nav ul {
 
 .news__content {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .news__summary {
@@ -514,6 +517,7 @@ nav ul {
       linear-gradient(rgba(15, 21, 35, 0.9), rgba(16, 30, 42, 0.9)),
       url('https://www.transparenttextures.com/patterns/old-map.png');
 }
+
 .form__group {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
@@ -538,20 +542,21 @@ nav ul {
 
 .form__group textarea {
   height: 150px;
-  resize: vertical;
 }
 
-button[type="submit"] {
+.form__button {
   background-color: #19223A;
   padding: 1rem 2rem;
   border: 1px solid #CD9327;
   color: #CD9327;
   cursor: pointer;
-  font-family: 'Cinzel', serif;
+  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-size: 1.1rem;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.form__button:hover {
   background-color: #CD9327;
   color: #19223A;
   border: 1px solid #19223A;
@@ -602,14 +607,15 @@ button[type="submit"]:hover {
   
   .header__title {
     font-size: 1.5rem;
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 10px 10px;
+    padding-top: 30px;
   }
 
   .header__subtitle {
-    padding: 10px 50px;
-    margin-bottom: 20px;
-    font-size: 1rem;
+    padding: 00px 50px;
+    margin-bottom: 30px;
+    font-size: 0.8rem;
   }
 
   .header__nav {
@@ -694,7 +700,7 @@ button[type="submit"]:hover {
   }
 
   .form__button {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     margin: auto;
   }
 } 
