@@ -1,9 +1,18 @@
 @import url('https://fonts.cdnfonts.com/css/harry-potter?styles=41888');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mountains+of+Christmas:wght@400;700&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mountains+of+Christmas:wght@400;700&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kranky&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.kranky-regular {
+  font-family: "Kranky", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .dm-serif-display-regular {
@@ -12,8 +21,21 @@
   font-style: normal;
 }
 
+.im-fell-double-pica-regular {
+  font-family: "IM Fell Double Pica", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mountains-of-christmas-bold {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
-  font-family: "DM Serif Display", serif;
+  font-family: "IM Fell Double Pica", serif;
+  /* font-family: "DM Serif Display", serif; */
   line-height: 1.6;
   color: #CD9327;
   background-color: #0f1523;
@@ -152,7 +174,6 @@ nav ul {
   transition: 0.4s;
 }
 
-/* Section Styles */
 .section {
   padding: 5rem 5rem;
   border-bottom: 1px solid #CD9327;
@@ -222,7 +243,8 @@ nav ul {
 }
 
 .section__title {
-  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-family: "Mountains of Christmas", serif; 
+  /* font-family: 'Luminari', 'Papyrus', fantasy; */
   color: #CD9327;
   text-align: center;
   font-size: 3rem;
@@ -292,7 +314,8 @@ nav ul {
 }
 
 .gallery__caption {
-  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-family: "Kranky", serif;
+  /* font-family: 'Luminari', 'Papyrus', fantasy; */
   color: #2a1810;
   text-align: center;
   padding: 1rem 0;
@@ -308,7 +331,7 @@ nav ul {
   background: #6b1212;
   color: #f4e4bc;
   border: 2px solid #d4af37;
-  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-family: "Kranky", serif;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -404,7 +427,7 @@ nav ul {
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid #CD9327;
-  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-family: "IM Fell Double Pica", serif;
   font-weight: bold;
 }
 
@@ -486,7 +509,7 @@ nav ul {
   transition: 0.3s;
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-family: "IM Fell Double Pica", serif;
   font-size: 0.8rem;
 }
 
@@ -531,7 +554,7 @@ nav ul {
   background: rgb(0, 0, 0, 0.1);
   border: 1px solid #CD9327;
   color: #CD9327;
-  font-family: "DM Serif Display", serif;
+  font-family: "IM Fell Double Pica", serif;
 }
 
 .form__group input:focus,
@@ -550,7 +573,7 @@ nav ul {
   border: 1px solid #CD9327;
   color: #CD9327;
   cursor: pointer;
-  font-family: 'Luminari', 'Papyrus', fantasy;
+  font-family: "IM Fell Double Pica", serif;
   font-size: 1.1rem;
   font-weight: bold;
   transition: all 0.3s ease;
